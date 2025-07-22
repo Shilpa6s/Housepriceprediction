@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #d93838;
+background: linear-gradient(0deg, rgba(217, 56, 56, 1) 0%, rgba(253, 187, 45, 1) 92%);
+}
+
+.prediction-form{
+    text-align: center;
+    width: 550px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    backdrop-filter: blur(25px);
+    border-radius: 16px;
+}
+
+.prediction-form .prediction-title{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.input-box{
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-box input{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 12px 12px 12px 45px;
+    border-radius: 99px;
+    outline: 3px solid transparent;
+    font-size: 17px;
+    color: whitesmoke;
+    font-weight: 500;
+    transition: 0.3s; 
+}
+
+.input-box input::placeholder{
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.input-box input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.input-box i{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.predict-btn{
+    width: 100%;
+    padding: 10px 0;
+    background: #f8de7e;
+    border: none;
+    border-radius: 99px;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.predict-btn:hover{
+    background: #fcf4a3;
+}
+
+.result-box {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .prediction-form {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .prediction-title {
+    font-size: 1.5rem;
+  }
+
+  .input-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input-box i {
+    margin-bottom: 5px;
+  }
+
+  .predict-btn {
+    font-size: 1rem;
+  }
+}

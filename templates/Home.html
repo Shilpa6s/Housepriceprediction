@@ -1,3 +1,72 @@
-<h1>
-    Hello! Welcome
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>California House Price Prediction</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+        <body>
+            <form action="{{ url_for('predict')}}" method="post" class="prediction-form">
+                <h1 class="prediction-title"> California HousePrice Prediction </h1>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-hand-point-right"></i>
+                    <input type="text" name="MedInc" placeholder="MedInc" required="required">
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-hand-point-right"></i>
+                    <input type="text" name="HouseAge" placeholder="HouseAge" required="required">
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-hand-point-right"></i>
+                    <input type="text" name="AveRooms" placeholder="AveRooms" required="required">
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-hand-point-right"></i>
+                    <input type="text" name=" AveBedrms" placeholder=" AveBedrms" required="required">
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-hand-point-right"></i>
+                    <input type="text"  name="Population" placeholder="Population" required="required">
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-hand-point-right"></i>
+                    <input type="text" name="AveOccup" placeholder="AveOccup" required="required">
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-hand-point-right"></i>
+                    <input type="text" name="Latitude" placeholder="Latitude" required="required" >
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-hand-point-right"></i>
+                    <input type="text" name="Longitude" placeholder="Longitude" required="required">
+                </div>
+
+                <button type="submit" class="predict-btn">Predict</button>
+
+                  {% if prediction_text %}
+  <div class="result-box">
+    <h2>{{ prediction_text }}</h2>
+  </div>
+{% endif %}
+
+            </form>
+
+          
+        </body>
+</html>
